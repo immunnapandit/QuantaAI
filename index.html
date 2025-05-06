@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ai Chat Bot</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <div class="chat-container">
-<div class="ai-chat-box">
-    <img src="ai.png.jpg" alt="" id="aiImage" width="10%">
-    <div class="ai-chat-area">
-   Hello ! How Can I Help you Today?
-    </div>
-   
-</div>
-    </div>
-    <div class="prompt-area">
-<input type="text" id="prompt" placeholder="Message...">
-<button id="image"><img src="img.svg" alt="">
-<input type="file" accept="images/*" hidden></button>
-<button id="submit"><img src="submit.svg" alt=""></button>
-    </div>
-  <script src="script.js"></script>  
+  <div class="chat-app">
+    <header class="chat-header">
+      <h1>🤖 Quanta AI ChatBot</h1>
+      <button id="toggleTheme" title="Toggle theme">🌓</button>
+    </header>
+
+    <main class="chat-display" id="chatDisplay"></main>
+
+    <footer class="chat-controls">
+      <input type="file" id="imageInput" accept="image/*" hidden />
+      <button id="uploadImage" title="Upload image">📎</button>
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="voiceBtn" title="Voice">🎤</button>
+      <button id="sendBtn" title="Send">➤</button>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
